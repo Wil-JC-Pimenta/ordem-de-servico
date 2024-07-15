@@ -7,26 +7,24 @@ $num_clientes = $query_clientes->num_rows;
 ?>
 <!DOCTYPE html>
 <html lang="en">
-<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lista de Clientes</title>
     <link rel="stylesheet" href="styles/style.css">
-    <link rel="stylesheet" href="styles/style-cliente.css">
-
-    
+    <link rel="stylesheet" href="styles/style-clientes.css">
 </head>
 <body>
-
-    <h1>Lista de Clientes</h1>
+    <h1>LISTA DE CLIENTES</h1>
     <ul>
         <li><a href="clientes.php">Listar Clientes</a></li> 
         <li><a href="cadastrar_cliente.php">Cadastrar Cliente</a></li>
         <li><a href="cadastrar_os.php">Cadastrar O.S.</a></li>
         <li><a href="ordemdeservico.php">Exibir O.S.</a></li>
-
     </ul>
-    <p>Estes são os clientes cadastrados no seu sistema:</p>
+    <button> <a href="index.html" onclick="submit">Voltar ao início</a> </button>  
+
+    <h2>Estes são os clientes cadastrados no seu sistema:</h2>
+
     <table border="1" cellpadding="10">
         <thead>
             <th>ID</th>
@@ -74,7 +72,5 @@ $num_clientes = $query_clientes->num_rows;
         </tbody>
     </table>
 
-    <button><a href="cadastrar_cliente.php" onclick="submit">Novo cadastro</a></button>
-    <button> <a href="index.html" onclick="submit">Voltar ao início</a> </button>
 </body>
 </html>

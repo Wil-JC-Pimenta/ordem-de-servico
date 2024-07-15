@@ -64,7 +64,7 @@ if(count($_POST) > 0) {
 </head>
 <body>
    
-   <h1>Cadastrar ordem de serviço</h1>
+   <h1>CADASTRAR O.S.</h1>
    <ul>
         <li><a href="clientes.php">Listar Clientes</a></li> 
         <li><a href="cadastrar_cliente.php">Cadastrar Cliente</a></li>
@@ -72,6 +72,7 @@ if(count($_POST) > 0) {
         <li><a href="ordemdeservico.php">Exibir O.S.</a></li>
 
     </ul>
+    <button> <a href="index.html" onclick="submit">Voltar ao início</a> </button>    
     <div class="container">
 
      

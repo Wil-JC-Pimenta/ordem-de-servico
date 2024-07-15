@@ -1,18 +1,21 @@
 <?php
-if(isset($_POST['confirmar'])) {
+include("conexao.php");
 
-    include("conexao.php");
+if(isset($_POST['confirmar'])) {
     $id = intval($_GET['id']);
     $sql_code = "DELETE FROM clientes WHERE id = '$id'";
     $sql_query = $mysqli->query($sql_code) or die($mysqli->error);
 
-    if($sql_query) { ?>
-        <h1>Cliente deletado com sucesso!</h1>
-        <p><a href="clientes.php">Clique aqui</a> para voltar para a lista de clientes.</p>
-        <?php
-        die();
+    if($sql_query) {
+        $message = "<div class='message'><h1>Cliente deletado com sucesso!</h1><p><a href='clientes.php'>Clique aqui</a> para voltar para a lista de clientes.</p></div>";
     }
 }
+
+$id = intval($_GET['id']);
+$sql_code = "SELECT nome FROM clientes WHERE id = '$id'";
+$sql_query = $mysqli->query($sql_code) or die($mysqli->error);
+$cliente = $sql_query->fetch_assoc();
+$cliente_nome = $cliente['nome'];
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -20,13 +23,75 @@ if(isset($_POST['confirmar'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Deletar Cliente</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <style>
+      
+        .message {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .confirm-dialog {
+            display: none;
+            text-align: center;
+            border: 1px solid #ccc;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    </style>
 </head>
 <body>
-    <h1>Tem certeza que deseja deletar este cliente?</h1>
-    
-    <form action="" method="post">
-        <a style="margin-right:40px;" href="clientes.php">Não</a>
-        <button name="confirmar" value="1" type="submit">Sim</button>
-    </form>
+<header>
+        <h1>DELETAR CLIENTE</h1>
+    </header>
+    <div class="content">
+        <ul>
+            <li><a href="clientes.php">Listar Clientes</a></li> 
+            <li><a href="cadastrar_cliente.php">Cadastrar Cliente</a></li>
+            <li><a href="cadastrar_os.php">Cadastrar O.S.</a></li>
+            <li><a href="ordemdeservico.php">Exibir O.S.</a></li>
+        </ul>
+
+        <h2 style="text-align: center;">Tem certeza que deseja deletar este cliente?</h2>
+        <form action="" method="post" id="deleteForm">
+            <button type="button" onclick="cancelDelete()">Não</button>
+            <button type="button" onclick="confirmDelete()">Sim</button>
+        </form>
+    </div>
+
+    <div class="confirm-dialog" id="confirmDialog">
+        <p>Essa ação irá excluir permanentemente o registro do cliente <strong><?php echo $cliente_nome; ?></strong>. Você deseja realmente continuar?</p>
+        <button onclick="submitForm()">Confirmar</button>
+        <button onclick="cancelDialog()">Cancelar</button>
+    </div>
+
+    <?php
+    if(isset($message)) {
+        echo $message;
+    }
+    ?>
+
+    <script>
+        function confirmDelete() {
+            document.getElementById('confirmDialog').style.display = 'block';
+        }
+
+        function cancelDelete() {
+            window.location.href = 'clientes.php';
+        }
+
+        function submitForm() {
+            document.getElementById('deleteForm').submit();
+        }
+
+        function cancelDialog() {
+            document.getElementById('confirmDialog').style.display = 'none';
+        }
+    </script>
 </body>
 </html>

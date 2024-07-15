@@ -1,4 +1,7 @@
 <?php
+// Variável para armazenar a mensagem de retorno
+$message = "";
+
 // Verifique se o formulário foi enviado
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     include('conexao.php'); // Inclua a conexão aqui, dentro do escopo onde é necessário
@@ -18,9 +21,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Execute a consulta SQL e verifique se a inserção/atualização foi bem-sucedida
     if ($mysqli->query($sql) === TRUE) { // Use $mysqli em vez de $conn
-        echo "Dados inseridos/atualizados com sucesso!";
+        $message = "<h2>Dados inseridos/atualizados com sucesso!</h2>";
     } else {
-        echo "Erro ao inserir/atualizar os dados: " . $mysqli->error; // Use $mysqli em vez de $conn
+        $message = "<h3>Erro ao inserir/atualizar os dados:</h3> " . $mysqli->error; // Use $mysqli em vez de $conn
     }
 
     // Feche a conexão com o MySQL
@@ -28,17 +31,30 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 }
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastrar Orçamento</title>
+    <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="styles/style-os.css">
-
+</head>
 <body>
+    <header>
+        <h1>Cadastro de serviços</h1>
+    </header>
 
-<a href="index.html">Inicio</a>
+    <ul>
+        <li><a href="clientes.php">Listar Clientes</a></li> 
+        <li><a href="cadastrar_cliente.php">Cadastrar Cliente</a></li>
+        <li><a href="cadastrar_os.php">Cadastrar O.S.</a></li>
+        <li><a href="ordemdeservico.php">Exibir O.S.</a></li>
+    </ul>
+    <button><a href="index.html">Início</a></button>
 
-
-
+    <!-- Exibir a mensagem de retorno -->
+    <div>
+        <?php echo $message; ?>
+    </div>
 </body>
+</html>

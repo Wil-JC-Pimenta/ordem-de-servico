@@ -58,15 +58,28 @@ $cliente = $query_cliente->fetch_assoc();
 
 ?>
 
-!DOCTYPE html>
+
+<html lang="en">
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastrar Orçamento</title>
-    <link rel="stylesheet" href="styles/style-editar-cliente.css">
-
+    <title>Editar O.S.</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/style-cadastrar-os.css">
 </head>
+<body>
+   
+   <h1>EDITAR O.S.</h1>
+   <ul>
+        <li><a href="clientes.php">Listar Clientes</a></li> 
+        <li><a href="cadastrar_cliente.php">Cadastrar Cliente</a></li>
+        <li><a href="cadastrar_os.php">Cadastrar O.S.</a></li>
+        <li><a href="ordemdeservico.php">Exibir O.S.</a></li>
+
+    </ul>
 <body>
     <div class="container">
         <a href="index.html">Início</a>

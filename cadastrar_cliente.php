@@ -55,31 +55,21 @@ if(count($_POST) > 0) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastrar Cliente</title>
+    <title>Cadastrar cliente</title>
     <link rel="stylesheet" href="styles/style.css">
-
     <link rel="stylesheet" href="styles/style-cadastrar-cliente.css">
-
 </head>
 <body>
-
-<header>
-        <h1>Cadastro de serviços</h1>
+    <header>
+        <h1>CADASTRAR CLIENTE</h1>
     </header>
-
     <ul>
         <li><a href="clientes.php">Listar Clientes</a></li> 
         <li><a href="cadastrar_cliente.php">Cadastrar Cliente</a></li>
         <li><a href="cadastrar_os.php">Cadastrar O.S.</a></li>
         <li><a href="ordemdeservico.php">Exibir O.S.</a></li>
-
     </ul>
-<div>
-    
-
-  
-    <h1 id="bg">Cadastrar Cliente</h1>
-
+    <button> <a href="index.html" onclick="submit">Voltar ao início</a> </button>    
     <form method="POST" action="">
         <p>
             <label>Nome:</label>

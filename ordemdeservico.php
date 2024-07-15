@@ -17,8 +17,8 @@ $num_os = $query_os->num_rows;
 
 </head>
 <body>
-<header>
-        <h1>Cadastro de serviços</h1>
+    <header>
+        <h1>TODAS AS ORDENS DE SERVIÇO</h1>
     </header>
 
     <ul>
@@ -28,6 +28,7 @@ $num_os = $query_os->num_rows;
         <li><a href="ordemdeservico.php">Exibir O.S.</a></li>
 
     </ul>
+    <button> <a href="index.html" onclick="submit">Voltar ao início</a> </button>    
     <div class="container">
         <h2>Lista de Ordens de Serviço</h2>
        
