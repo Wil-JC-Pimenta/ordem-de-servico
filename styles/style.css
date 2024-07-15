@@ -1,0 +1,68 @@
+      /* Estilos globais */
+      
+
+    body {
+        background-image: linear-gradient(to right top, #d16ba5, #c777b9, #ba83ca, #aa8fd8, #9a9ae1, #8aa7ec, #79b3f4, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1);
+        font-family: Arial, sans-serif;
+        border:none;
+        max-width: 100%;
+        min-height: 900px;
+        height: 100%;   
+        
+    }
+
+    header {
+        background-color: rgba(0, 0, 255, 0.989);
+        color: #fff;
+        padding: 20px;
+        border-radius: 6px;
+        text-align: center;
+    }
+
+    h1 {
+        align-items: center;
+        margin: 0;
+    }
+
+    ul {
+        border-radius: 6px;
+        background-color: #0f013e;
+        color: #fff;
+        list-style-type: none;
+        padding: 10px;
+        text-align: center;
+    }
+
+    ul li {
+        display: inline;
+        margin-right: 20px;
+    }
+
+    ul li a {
+        text-decoration: none;
+        color: #fff;
+    }
+    
+
+    .noticia{
+
+    display: flex;
+
+    }
+
+    button {
+        display: block;
+        margin: 10px auto;
+        padding: 10px 20px;
+        background-color: rgba(0, 0, 255, 0.989);
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        text-align: center;
+        cursor: pointer;
+    }
+
+    button a {
+        color: #fff;
+        text-decoration: none;
+    }

@@ -59,83 +59,22 @@ if(count($_POST) > 0) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastrar Orçamento</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
-            margin: 0;
-            padding: 0;
-        }
-
-        .container {
-            background: #fff;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            padding: 20px;
-            margin: 20px auto;
-            max-width: 500px;
-        }
-
-        .container a {
-            text-decoration: none;
-            color: #555;
-            margin-right: 10px;
-        }
-
-        .container a:hover {
-            text-decoration: underline;
-        }
-
-        form {
-            margin-top: 20px;
-        }
-
-        label {
-            display: block;
-            font-weight: bold;
-            margin-bottom: 5px;
-        }
-
-        input[type="number"],
-        input[type="text"],
-        textarea {
-            width: 95%;
-            padding: 10px;
-            margin-bottom: 15px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            font-size: 16px;
-        }
-
-        textarea {
-            resize: vertical;
-            min-height: 95px;
-        }
-
-    button {
-            display: block;
-            margin: 10px auto;
-            padding: 10px 20px;
-            background-color: #333;
-            color: #fff;
-            border: none;
-            border-radius: 5px;
-            text-align: center;
-            cursor: pointer;
-        }
-
-        button a {
-            color: #fff;
-            text-decoration: none;
-        }
-    </style>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/style-cadastrar-os.css">
 </head>
 <body>
+   
+   <h1>Cadastrar ordem de serviço</h1>
+   <ul>
+        <li><a href="clientes.php">Listar Clientes</a></li> 
+        <li><a href="cadastrar_cliente.php">Cadastrar Cliente</a></li>
+        <li><a href="cadastrar_os.php">Cadastrar O.S.</a></li>
+        <li><a href="ordemdeservico.php">Exibir O.S.</a></li>
+
+    </ul>
     <div class="container">
 
-        <button><a href="index.html" onclick="submit">Início</a></button>
-        <button> <a href="ordemdeservico.php" onclick="submit">Voltar para a lista de O.S.</a> </button>
+     
         <form method="POST" action="os.php">
             <div>
                 <label for="id">Número da  O.S. :</label>
@@ -164,7 +103,8 @@ if(count($_POST) > 0) {
             <button type="submit" name="salvar">Salvar</button>
         </form>
     </div>
-
+    <button> <a href="ordemdeservico.php" onclick="submit">Listar todas as Ordens de Serviço</a> </button>
+    <button><a href="index.html" onclick="submit">Voltar ao início</a></button>
     <script>
         function calcularOrcamentoTotal() {
             var materiais = parseFloat(document.getElementById("materiais").value) || 0;

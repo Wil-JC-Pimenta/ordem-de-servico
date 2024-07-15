@@ -11,86 +11,21 @@ $num_clientes = $query_clientes->num_rows;
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lista de Clientes</title>
-    <style>
-        /* Estilos globais */
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f2f2f2;
-            margin: 0;
-            padding: 0;
-        }
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/style-cliente.css">
 
-        a {
-            text-decoration: none;
-            color: #333;
-            margin: 10px;
-        }
-
-        h1 {
-            background-color: #333;
-            color: #fff;
-            padding: 20px;
-            text-align: center;
-        }
-
-        p {
-            margin: 10px;
-            text-align: center;
-        }
-
-        table {
-            margin: 20px auto;
-            border-collapse: collapse;
-            width: 80%;
-            max-width: 1000px;
-        }
-
-        th, td {
-            border: 1px solid #ccc;
-            padding: 10px;
-            text-align: center;
-        }
-
-        th {
-            background-color: #333;
-            color: #fff;
-        }
-
-        tbody tr:nth-child(even) {
-            background-color: #f2f2f2;
-        }
-
-        button {
-            display: block;
-            margin: 10px auto;
-            padding: 10px 20px;
-            background-color: #333;
-            color: #fff;
-            border: none;
-            border-radius: 5px;
-            text-align: center;
-            cursor: pointer;
-        }
-
-        button a {
-            color: #fff;
-            text-decoration: none;
-        }
-
-        /* Cor dos links Editar e Deletar */
-        a.edit-link {
-            color: blue;
-        }
-
-        a.delete-link {
-            color: red;
-        }
-      
-    </style>
+    
 </head>
 <body>
-   <button> <a href="index.html" onclick="submit">Voltar ao início</a> </button>
+
     <h1>Lista de Clientes</h1>
+    <ul>
+        <li><a href="clientes.php">Listar Clientes</a></li> 
+        <li><a href="cadastrar_cliente.php">Cadastrar Cliente</a></li>
+        <li><a href="cadastrar_os.php">Cadastrar O.S.</a></li>
+        <li><a href="ordemdeservico.php">Exibir O.S.</a></li>
+
+    </ul>
     <p>Estes são os clientes cadastrados no seu sistema:</p>
     <table border="1" cellpadding="10">
         <thead>
@@ -140,5 +75,6 @@ $num_clientes = $query_clientes->num_rows;
     </table>
 
     <button><a href="cadastrar_cliente.php" onclick="submit">Novo cadastro</a></button>
+    <button> <a href="index.html" onclick="submit">Voltar ao início</a> </button>
 </body>
 </html>

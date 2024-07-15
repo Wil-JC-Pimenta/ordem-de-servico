@@ -64,74 +64,8 @@ $cliente = $query_cliente->fetch_assoc();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastrar Orçamento</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
-            margin: 0;
-            padding: 0;
-        }
+    <link rel="stylesheet" href="styles/style-editar-cliente.css">
 
-        .container {
-            background: #fff;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            padding: 20px;
-            margin: 20px auto;
-            max-width: 500px;
-        }
-
-        .container a {
-            text-decoration: none;
-            color: #555;
-            margin-right: 10px;
-        }
-
-        .container a:hover {
-            text-decoration: underline;
-        }
-
-        form {
-            margin-top: 20px;
-        }
-
-        label {
-            display: block;
-            font-weight: bold;
-            margin-bottom: 5px;
-        }
-
-        input[type="number"],
-        input[type="text"],
-        textarea {
-            width: 95%;
-            padding: 10px;
-            margin-bottom: 15px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            font-size: 16px;
-        }
-
-        textarea {
-            resize: vertical;
-            min-height: 95px;
-        }
-
-        button {
-            background-color: #555;
-            color: #fff;
-            border: none;
-            padding: 10px 20px;
-            border-radius: 4px;
-            font-size: 16px;
-            cursor: pointer;
-        }
-
-        button:hover {
-            background-color: #333;
-        }
-    </style>
 </head>
 <body>
     <div class="container">

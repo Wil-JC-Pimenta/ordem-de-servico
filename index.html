@@ -1,86 +1,114 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastrar Orçamento</title>
-    <style>
-        /* Estilos globais */
-        body {
-            font-family: Arial, sans-serif;
-            
-        }
-
-        header {
-            background-color: #333;
-            color: #fff;
-            padding: 20px;
-            text-align: center;
-        }
-
-        h1 {
-            margin: 0;
-        }
-
-        ul {
-            background-color: #444;
-            color: #fff;
-            list-style-type: none;
-            padding: 10px;
-            text-align: center;
-        }
-
-        ul li {
-            display: inline;
-            margin-right: 20px;
-        }
-
-        ul li a {
-            text-decoration: none;
-            color: #fff;
-        }
-        
-
-        .noticia{
-
-        display: flex;
-
-        }
-
-        button {
-            display: block;
-            margin: 10px auto;
-            padding: 10px 20px;
-            background-color: #333;
-            color: #fff;
-            border: none;
-            border-radius: 5px;
-            text-align: center;
-            cursor: pointer;
-        }
-
-        button a {
-            color: #fff;
-            text-decoration: none;
-        }
-
-    </style>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/styles-index-bootsrap.css">
 </head>
+
 <body>
     <header>
         <h1>Cadastro de serviços</h1>
     </header>
+
     <ul>
         <li><a href="clientes.php">Listar Clientes</a></li> 
         <li><a href="cadastrar_cliente.php">Cadastrar Cliente</a></li>
-        <li><a href="Cadastrar_os.php">Cadastrar O.S.</a></li>
+        <li><a href="cadastrar_os.php">Cadastrar O.S.</a></li>
         <li><a href="ordemdeservico.php">Exibir O.S.</a></li>
 
     </ul>
-
-
+    <section class="home-blog bg-sand">
+        <div class="container">
+            <!-- section title -->
+            <div class="row justify-content-md-center">
+                <div class="col-xl-5 col-lg-6 col-md-8">
+                    <div class="section-title text-center title-ex1">
+                        <h2>Últimas Notícias</h2>
+                        <p>Acompanhe as novidades sobre gestão empresarial e como otimizar o gerenciamento de ordens de serviço em sua empresa.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- section title ends -->
+            <div class="row ">
+                <div class="col-md-6">
+                    <div class="media blog-media">
+                      <a href="blog-post-left-sidebar.html"><img class="d-flex" src="https://www.bootdey.com/image/350x380/6495ED/000000" alt="Generic placeholder image"></a>
+                      <div class="circle">
+                          <h5 class="day">14</h5>
+                          <span class="month">sep</span>
+                      </div>
+                      <div class="media-body">
+                        <a href=""><h5 class="mt-0">Importância da Gestão Eficiente</h5></a>
+                        Uma gestão eficiente é crucial para garantir a produtividade e a satisfação dos clientes em sua empresa.
+                        <a href="blog-post-left-sidebar.html" class="post-link">Read More</a>
+                        <ul>
+                            <li>by: Admin</li>
+                            <li class="text-right"><a href="blog-post-left-sidebar.html">07 comments</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="media blog-media">
+                      <a href="blog-post-left-sidebar.html"><img class="d-flex" src="https://www.bootdey.com/image/350x380/FFB6C1/000000" alt="Generic placeholder image"></a>
+                      <div class="circle">
+                            <h5 class="day">12</h5>
+                            <span class="month">sep</span>
+                        </div>
+                      <div class="media-body">
+                        <a href=""><h5 class="mt-0">>Automatização de Processos</h5></a>
+                        Descubra como a automatização de processos pode reduzir custos e aumentar a eficiência das operações diárias.
+                        <a href="blog-post-left-sidebar.html" class="post-link">Read More</a>
+                        <ul>
+                            <li>by: Admin</li>
+                            <li class="text-right"><a href="blog-post-left-sidebar.html">04 comments</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="media blog-media">
+                      <a href="blog-post-left-sidebar.html"><img class="d-flex" src="https://www.bootdey.com/image/350x380/FF7F50/000000" alt="Generic placeholder image"></a>
+                      <div class="circle">
+                            <h5 class="day">09</h5>
+                            <span class="month">sep</span>
+                        </div>
+                      <div class="media-body">
+                        <a href=""><h5 class="mt-0">Gestão de ordens de serviço</h5></a>
+                        Saiba como uma boa gestão de ordens de serviço pode melhorar a organização e a eficiência da sua equipe.
+                        <a href="blog-post-left-sidebar.html" class="post-link">Read More</a>
+                        <ul>
+                            <li>by: Admin</li>
+                            <li class="text-right"><a href="blog-post-left-sidebar.html">10 comments</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="media blog-media">
+                      <a href="blog-post-left-sidebar.html"><img class="d-flex" src="https://www.bootdey.com/image/350x380/008B8B/000000" alt="Generic placeholder image"></a>
+                      <div class="circle">
+                            <h5 class="day">04</h5>
+                            <span class="month">sep</span>
+                        </div>
+                      <div class="media-body">
+                        <a href=""><h5 class="mt-0">Melhoria Contínua </h5></a>
+                        Explore estratégias de melhoria contínua para aprimorar a qualidade dos serviços prestados.
+                        <a href="blog-post-left-sidebar.html" class="post-link">Read More</a>
+                        <ul>
+                            <li>by: Admin</li>
+                            <li class="text-right"><a href="blog-post-left-sidebar.html">06 comments</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+   
 
  
 

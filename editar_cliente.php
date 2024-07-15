@@ -66,53 +66,7 @@ $cliente = $query_cliente->fetch_assoc();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastrar Cliente</title>
-    <style>
-        /* Estilos globais */
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f2f2f2;
-            margin: 0;
-            padding: 0;
-        }
-
-        a {
-            text-decoration: none;
-            color: #333;
-            margin: 10px;
-        }
-
-        form {
-            background-color: #fff;
-            max-width: 400px;
-            margin: 20px auto;
-            padding: 20px;
-            border-radius: 5px;
-            box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
-        }
-
-        label {
-            display: block;
-            margin-bottom: 10px;
-        }
-
-        input[type="text"] {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 20px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-
-        button {
-            background-color: #333;
-            color: #fff;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            text-align: center;
-            cursor: pointer;
-        }
-    </style>
+    <link rel="stylesheet" href="styles/style-editar-cliente.css">
 </head>
 <body>
     <a href="clientes.php">Voltar para a lista</a>

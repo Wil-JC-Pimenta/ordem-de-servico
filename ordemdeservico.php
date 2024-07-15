@@ -12,86 +12,26 @@ $num_os = $query_os->num_rows;
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lista de Ordens de Serviço</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
-            margin: 0;
-            padding: 0;
-        }
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/style-ordemdeservico.css">
 
-        .container {
-            background: #fff;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            padding: 20px;
-            margin: 20px auto;
-            max-width: 900px;
-        }
-
-        .container a {
-            text-decoration: none;
-            color: #555;
-            margin-right: 10px;
-        }
-
-        .container a:hover {
-            text-decoration: underline;
-        }
-
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 20px;
-        }
-
-        th, td {
-            padding: 10px;
-            text-align: left;
-            border-bottom: 1px solid #ddd;
-        }
-
-        th {
-            background-color: #f2f2f2;
-        }
-
-        .actions a {
-            margin-right: 10px;
-            text-decoration: none;
-        }
-
-        .actions a.edit {
-            color: blue;
-        }
-
-        .actions a.delete {
-            color: red;
-        }
-         
-         
-        button {
-            display: block;
-            margin: 10px auto;
-            padding: 10px 20px;
-            background-color: #333;
-            color: #fff;
-            border: none;
-            border-radius: 5px;
-            text-align: center;
-            cursor: pointer;
-        }
-
-        button a {
-            color: #fff;
-            text-decoration: none;
-        }
-    </style>
 </head>
 <body>
+<header>
+        <h1>Cadastro de serviços</h1>
+    </header>
+
+    <ul>
+        <li><a href="clientes.php">Listar Clientes</a></li> 
+        <li><a href="cadastrar_cliente.php">Cadastrar Cliente</a></li>
+        <li><a href="cadastrar_os.php">Cadastrar O.S.</a></li>
+        <li><a href="ordemdeservico.php">Exibir O.S.</a></li>
+
+    </ul>
     <div class="container">
-    <button> <a href="index.html" onclick="submit">Voltar ao início</a> </button>
-        <h1>Lista de Ordens de Serviço</h1>
+        <h2>Lista de Ordens de Serviço</h2>
+       
+ 
         <p>Estas são as ordens de serviço cadastradas no seu sistema:</p>
         <?php if($num_os == 0) { ?>
             <p>Nenhuma ordem de serviço foi cadastrada</p>
@@ -130,5 +70,6 @@ $num_os = $query_os->num_rows;
         <?php } ?>
     </div>
     
+    <button> <a href="index.html" onclick="submit">Voltar ao início</a> </button>    
 </body>
 </html>

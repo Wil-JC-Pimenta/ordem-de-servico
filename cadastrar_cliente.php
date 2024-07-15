@@ -56,118 +56,30 @@ if(count($_POST) > 0) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastrar Cliente</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
-            margin: 0;
-            padding: 0;
-        }
+    <link rel="stylesheet" href="styles/style.css">
 
-        a {
-            text-decoration: none;
-            color: #555;
-            margin-right: 10px;
-        }
+    <link rel="stylesheet" href="styles/style-cadastrar-cliente.css">
 
-        a:hover {
-            text-decoration: underline;
-        }
-
-        form {
-            max-width: 400px;
-            margin: 20px auto;
-            padding: 20px;
-            background-color: #fff;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
-
-        label {
-            font-weight: bold;
-            display: block;
-            margin-bottom: 5px;
-        }
-
-        input[type="text"] {
-            width: 95%;
-            padding: 10px;
-            margin-bottom: 15px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            font-size: 16px;
-        }
-
-        input[type="text"][name="telefone"] {
-            font-family: Arial, sans-serif;
-            padding: 10px;
-            width: 95%;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            font-size: 16px;
-        }
-
-        button {
-            background-color: #555;
-            color: #fff;
-            border: none;
-            padding: 10px 20px;
-            border-radius: 4px;
-            font-size: 16px;
-            cursor: pointer;
-        }
-
-        button:hover {
-            background-color: #333;
-        }
-
-        p {
-            margin: 0;
-        }
-
-        p.error {
-            color: red;
-            font-weight: bold;
-        }
-
-        p.success {
-            color: green;
-            font-weight: bold;
-        }
-
-        h1 {
-            background-color: #555;
-            color: #fff;
-            padding: 20px;
-            text-align: center;
-        }
-        
-
-        button {
-            display: block;
-            margin: 10px auto;
-            padding: 10px 20px;
-            background-color: #333;
-            color: #fff;
-            border: none;
-            border-radius: 5px;
-            text-align: center;
-            cursor: pointer;
-        }
-
-        button a {
-            color: #fff;
-            text-decoration: none;
-        }
-    </style>
 </head>
 <body>
 
-<div>
+<header>
+        <h1>Cadastro de serviços</h1>
+    </header>
 
-   <button> <a href="clientes.php" onclick="submit">Voltar para a lista</a> </button>
-    <h1>Cadastrar Cliente</h1>
+    <ul>
+        <li><a href="clientes.php">Listar Clientes</a></li> 
+        <li><a href="cadastrar_cliente.php">Cadastrar Cliente</a></li>
+        <li><a href="cadastrar_os.php">Cadastrar O.S.</a></li>
+        <li><a href="ordemdeservico.php">Exibir O.S.</a></li>
+
+    </ul>
+<div>
+    
+
+  
+    <h1 id="bg">Cadastrar Cliente</h1>
+
     <form method="POST" action="">
         <p>
             <label>Nome:</label>
@@ -191,6 +103,7 @@ if(count($_POST) > 0) {
     </form>
 </div>
 
+<button> <a href="clientes.php" onclick="submit">Voltar para a lista de clientes</a> </button>
 
 
 </body>
